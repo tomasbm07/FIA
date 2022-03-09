@@ -1,0 +1,4 @@
+	1. Utilizar o script que está na pasta;
+	2. Liguei o sensor da esquerda à roda da direita e o sensor da direita à roda da esquerda; 
+	3. Coloquei a média do sensor da direita a 1 e mantive o outro a 0
+	4. Diminui a velocidade máxima para 5, não sei se isso faz alguma diferença.
