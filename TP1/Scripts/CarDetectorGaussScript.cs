@@ -10,9 +10,10 @@ public class CarDetectorGaussScript : CarDetectorScript {
 	// Get gaussian output value
 	public override float GetOutput()
 	{
-		// YOUR CODE HERE
+		//float left = 1f/stdDev*Mathf.Sqrt(2*Mathf.PI);
+        //float right = Math.Exp( -1f/2f * (float)Math.Pow(output - mean, 2)/(float)Math.Pow(stdDev, 2));
 
-		return 0.0f;
+		return 0f;
 	}
 
 

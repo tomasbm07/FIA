@@ -6,7 +6,7 @@ using System;
 public class CarDetectorScript : MonoBehaviour {
 
 	public float car_angle = 180f;
-	public bool ApplyThresholds, ApplyLimits;
+	public bool ApplyThresholds, ApplyLimits, invert_output;
 	public float MinX, MaxX, MinY, MaxY;
 	private bool useAngle = true;
 
@@ -31,15 +31,19 @@ public class CarDetectorScript : MonoBehaviour {
 		GameObject[] cars = GetVisibleCars();
 		GameObject closestCar = null;
 
-		if (cars.Length == 0)
+		if (cars.Length < 1)
             output = 0;
         else{
-            output = 999999;
+            output = 1;
             float temp, temp_ang;
             foreach(GameObject car in cars){
-                temp = Vector3.Distance(transform.position, car.transform.position) * 0.05f;
-                if (temp < output) output = temp;
+                temp = Vector3.Distance(transform.position, car.transform.position);
+                if (temp!=0f){
+                    temp = 1f / ( temp + 1f );
+                    if ( temp < output) output = temp ;
+                }
             }
+            if (invert_output) output = 1f - output;
         }
 
 	}
@@ -67,7 +71,6 @@ public class CarDetectorScript : MonoBehaviour {
 			forward.y = 0;
             
 			float angleToTarget = Vector3.Angle (forward, toVector);
-            Debug.Log(gameObject.name + " : " + angleToTarget + " < " + halfAngle);
 			if (angleToTarget <= halfAngle) {
 				visibleCars.Add (car);
 			}

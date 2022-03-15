@@ -1,0 +1,17 @@
+	1. Utilizar os scripts que estão na pasta TP1;
+	2. Liguei o sensor gaussiano da esquerda à roda da esquerda e o sensor gaussiano da direita à roda da direita; 
+	3. Ambos os sensores iguais:
+		3.1 mean 	= 0.3
+		3.2 stdDev 	= 1
+		3.3 ApplyThresholds = True-> MinX = 0.1
+								  -> MaxX = 0.3
+		3.4 ApplyLimits  =  True  -> MinY = 0.5
+								  -> MaxY = 0.7
+		3.5 = 360
+	4. Diminui a velocidade máxima para 5.
+	
+	
+Este carro, com todas as alterações incluídas, demonstra ter um comportamento complexo.
+Ambos os sensores são iguais, com valores de threshold e limites incluidos. 
+No cenário em concreto, o carro não realiza um infinito perfeito, apesar do circuito realizado ser bastante próximo de um.
+Quando o carro tem os sensores sensivelmente equidistante das fontes de luz, mantém uma velocidade constante. No entanto, quando se aproxima mais de alguma, contorna-a sem realizar um circulo perfeito.

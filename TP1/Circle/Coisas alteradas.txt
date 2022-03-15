@@ -1,4 +1,13 @@
-	1. Utilizar o script que está na pasta;
-	2. Liguei o sensor da esquerda à roda da direita e o sensor da direita à roda da esquerda; 
+	1. Utilizar os scripts que estão na pasta TP1;
+	2. Liguei o sensor gaussiano da esquerda à roda da direita e o sensor gaussiano da direita à roda da esquerda; 
 	3. Coloquei a média do sensor da direita a 1 e mantive o outro a 0
-	4. Diminui a velocidade máxima para 5, não sei se isso faz alguma diferença.
+	4. Diminui a velocidade máxima para 5.
+	
+
+
+Para o carro efetuar um circulo foi utilizado o sensor da esquerda ligado à roda da direita, com uma função gaussiana de parâmetros (mean = 0, stdDev = 1) e um sensor da direita ligado à roda da esquerda, também com uma função gaussiana de parâmetros (mean = 1, stdDev = 1);
+O ângulo de captura do sinal de ambos os sensores é de 180º.
+
+Inicalmente o carro aproxima-se da luz, pois a roda da direita tem mais velocidade que a da esquerda. Isto acontece até certo ponto. 
+Quando o carro se aproxima demasiado, a roda da direita perde velocidade, sendo que fica até com menos do que a roda da esquerda. Quando isto acontece o carro ajusta-se e fica tangente à luz. A partir deste ponto mantêm-se estático em circulo, à volta da luz.
+

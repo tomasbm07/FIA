@@ -6,7 +6,7 @@ using System;
 public class LightDetectorScript : MonoBehaviour {
 
 	public float light_angle=180;
-	public bool ApplyThresholds, ApplyLimits;
+	public bool ApplyThresholds, ApplyLimits, invert_output;
 	public float MinX, MaxX, MinY, MaxY;
 	private bool useAngle = true;
 
@@ -38,7 +38,7 @@ public class LightDetectorScript : MonoBehaviour {
 			//print (1 / (transform.position - light.transform.position).sqrMagnitude);
 			float r = light.GetComponent<Light> ().range;
 			output += 1.0f / ((transform.position - light.transform.position).sqrMagnitude / r + 1);
-			//Debug.DrawLine (transform.position, light.transform.position, Color.red);
+			Debug.DrawLine (transform.position, light.transform.position, Color.red);
 		}
 	
 	}
