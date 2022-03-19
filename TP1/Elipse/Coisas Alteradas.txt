@@ -1,0 +1,11 @@
+	1. Utilizar os scripts que estão na pasta TP1;
+	2. Liguei o sensor gaussiano da esquerda à roda da direita e o sensor gaussiano da direita à roda da esquerda; 
+	3. Sensor da direita:
+		3.1 mean 	= -1.1 | -0.5
+		3.2 stdDev 	=  1.5 |  0.9
+		3.3 ang		= 360º
+	4. Sensor da esquerda:
+		4.1 mean	= 0.12 | -0.5
+		4.2 stdDev	= 1    |  2
+		4.3 ang		= 360º
+	5. Diminui a velocidade máxima para 5.
